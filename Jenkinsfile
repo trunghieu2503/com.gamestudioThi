@@ -1,6 +1,6 @@
 pipeline {
-agent any
-stages {
+    agent any
+    stages {
         stage('SCM') {
             steps {
                 checkout scm
@@ -19,5 +19,5 @@ stages {
                 sh './gradlew clean build'
             }
         }
-}
+    }
 }
