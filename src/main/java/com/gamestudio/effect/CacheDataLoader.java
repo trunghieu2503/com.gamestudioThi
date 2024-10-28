@@ -86,10 +86,14 @@ public class CacheDataLoader {
     public void LoadSounds() throws IOException{
         sounds = new Hashtable<String, AudioClip>();
 
-        FileReader fr = new FileReader(soundfile);
-        BufferedReader br = new BufferedReader(fr);
+        try(FileReader fr = new FileReader(soundfile);
+            BufferedReader br = new BufferedReader(fr)){
+            String line = br.readLine();
+        }
 
-        String line = null;
+
+
+
 
         if(br.readLine()==null) { // no line = "" or something like that
             System.out.println("No data");
