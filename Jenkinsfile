@@ -15,7 +15,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('SonarSever') {
-                    sh './gradlew sonar' // Gọi phân tích SonarQube sau khi đã biên dịch
+                    sh './gradlew sonar' // Gọi phân tích SonarQube sau khi đã biên dịch  ok
                 }
             }
         }
