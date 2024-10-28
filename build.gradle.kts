@@ -20,8 +20,8 @@ tasks.test {
 }
 sonar {
     properties {
-        property("sonar.projectKey", "TestSonar")
-        property("sonar.projectName", "TestSonar")
+        property("sonar.projectKey", "TestFindBug")
+        property("sonar.projectName", "TestFindBug")
         property("sonar.sources", "src/main/java") 
         property("sonar.java.binaries", "build/classes/java/main")
     }
